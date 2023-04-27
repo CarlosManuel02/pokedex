@@ -3,7 +3,7 @@ version: '3'
 services:
   mongo:
     image: mongo:5.0.0
-#    container_name: mongo
+    container_name: pokemon-mongo
     restart: always
     ports:
       - 27018:27017
