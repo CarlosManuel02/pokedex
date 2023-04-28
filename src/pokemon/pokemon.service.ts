@@ -5,7 +5,6 @@ import {Pokemon} from "./entities/pokemon.entity";
 import {isValidObjectId, Model} from "mongoose";
 import {InjectModel} from "@nestjs/mongoose";
 import {PaginationDto} from "../common/dto/pagination.dto";
-import * as process from "process";
 import {ConfigService} from "@nestjs/config";
 
 @Injectable()

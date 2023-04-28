@@ -13,7 +13,6 @@ export class SeedService {
     constructor(
         @InjectModel(Pokemon.name)
         private readonly pokemonModel: Model<Pokemon>,
-
         private readonly http: AxiosAdapter,
     ) {
     }
@@ -23,7 +22,7 @@ export class SeedService {
         await this.pokemonModel.deleteMany({});
         const data = await this.http.get<pokeResponse>('https://pokeapi.co/api/v2/pokemon?limit=500&offset=0')
 
-        const PromiseArray: {name:string, no:number}[] = [];
+        const PromiseArray: { name: string, no: number }[] = [];
         for (const {name, url} of data.results) {
 
             const segments = url.split('/')

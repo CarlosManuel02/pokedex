@@ -11,9 +11,10 @@ import {ConfigModule} from "@nestjs/config";
     imports: [
         ConfigModule,
         MongooseModule.forFeature([
-        {name: Pokemon.name,schema: PokemonSchema}
-    ])
+            {name: Pokemon.name, schema: PokemonSchema}
+        ])
     ],
     exports: [MongooseModule]
 })
-export class PokemonModule {}
+export class PokemonModule {
+}
